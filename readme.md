@@ -29,3 +29,5 @@ SQL Query: "select Province, round(sum(amount),2) as TotalAmount, round(avg(amou
    
    b) SQL Query customers amount: "select round(sum(case when c.age <=25 then t.amount else 0 end),2) as Amt_0to25, round(sum(case when c.age >25 and c.age<=50 then t.amount else 0 end),2) as Amt_26to50, round(sum(case when c.age >50 then t.amount else 0 end),2) as Amt_51to100 from transaction t join orders o on t.orderid=o.orderid join customers c on o.customerid=c.customerid"
 
+The tests were compared with the SparkSQL and it was found the in many queries they ran faster on duckDB. In addition, I feel duckDb is better as it allows us to directly execute the SQL queries, however for the spark SQL we create temporary views and analyze the data on them, so we are manipulating data frames for spark Sql.
+
