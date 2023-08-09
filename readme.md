@@ -12,6 +12,7 @@ SQL Query:"select province, avg(age) as AverageAge,min(age) as MinAge ,max(age) 
 
 2. Summarizing total sales amounts by year and month.
    a)SQL Query for year:"select date_part('year',Date) as Years, round(sum(amount),2) from transaction group by Years"
+   
    b)SQL Query for month: "select date_part('month', Date) as Month, round(sum(amount),2) as TotalSum from transaction group by Month"
 
 4. Aggregating sales amounts and customer counts by province.
