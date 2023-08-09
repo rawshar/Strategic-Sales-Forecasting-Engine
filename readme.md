@@ -23,6 +23,9 @@ SQL Query: "select Province, round(sum(amount),2) as TotalAmount, round(avg(amou
    SQL Query: "select s.salesid, sum(t.amount) as TotalSales  from transaction t join orders as o on t.orderid=o.orderid join sales as s on s.salesid=s.salesid group by s.salesid order by TotalSales desc limit 10 "
 
 5. Analyzing sales amounts and customer counts by age groups.
+   
    a) SQL Query sales amounts: "select sum(case when c.age <=25 then 1 else 0 end) as Age_0to25, sum(case when c.age >25 and c.age<=50 then 1 else 0 end) as Age_26to50, sum(case when c.age >50 then 1 else 0 end) as Age_51to100 from transaction t join orders o on t.orderid=o.orderid join customers c on o.customerid=c.customerid"
+
+   
    b) SQL Query customers amount: "select round(sum(case when c.age <=25 then t.amount else 0 end),2) as Amt_0to25, round(sum(case when c.age >25 and c.age<=50 then t.amount else 0 end),2) as Amt_26to50, round(sum(case when c.age >50 then t.amount else 0 end),2) as Amt_51to100 from transaction t join orders o on t.orderid=o.orderid join customers c on o.customerid=c.customerid"
 
