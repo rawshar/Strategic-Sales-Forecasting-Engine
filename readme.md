@@ -10,7 +10,8 @@ The Queries performed are on the following tasks:
 1. Calculating average, minimum, and maximum ages of salesmen by province.
 SQL Query:"select province, avg(age) as AverageAge,min(age) as MinAge ,max(age) as MaxAge from sales group by province"
 
-2. Summarizing total sales amounts by year and month.
+2. Summarizing total sales amounts by year and month:
+   
    a)SQL Query for year:"select date_part('year',Date) as Years, round(sum(amount),2) from transaction group by Years"
    
    b)SQL Query for month: "select date_part('month', Date) as Month, round(sum(amount),2) as TotalSum from transaction group by Month"
