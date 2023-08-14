@@ -21,3 +21,13 @@ Products
 8. name: combination of the above 7 (Varchar)
 9. PrdouctId: range(1, 20001) (int)
 
+Transactions:
+
+
+1. 'transaction_id': range(1,200001)
+2. 'customer_id': range(1,20001)
+3. 'product_id': range(1,20001) 
+4. 'quantity': [0.5, 0.25, 1, 0.75, 2, 3, 4]# 7
+5. 'transaction_date': 1 year before
+
+
