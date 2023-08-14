@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 num_transactions = 200000
 
 
-quantities = [0.5, 0.25, 1, 0.75, 2, 3, 4, 5, 6, 7] 
+quantities = [0.5, 0.25, 1, 0.75, 2, 3, 4] 
 
 
 transaction_data = {
