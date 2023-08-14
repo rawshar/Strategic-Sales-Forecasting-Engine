@@ -6,13 +6,13 @@ import itertools
 product_ids = range(1, 20001)
 
 
-size_in_litres = [0.5, 0.25, 1, 0.75, 2, 3, 4, 5, 6, 7]
-beverage_types = ['beer', 'gin', 'vodka', 'tequila', 'wine', 'whisky', 'rum', 'brandy', 'champagne']
-sweetness = ['Dry', 'Sweet', 'Semi-Dry', 'Semi-Sweet']
-colors = ['black', 'red', 'white', 'yellow', 'orange', 'green', 'blue', 'pink', 'brown']
-flavours = ['orange', 'grape', 'raspberry', 'strawberry', 'lemon', 'lime', 'cherry', 'peach', 'apple', 'pineapple']
-brands = ['Heineken', 'Corona', 'Budweiser', 'Absolut', 'JackDaniels', 'GreyGoose', 'Jameson', 'ChivasRegal', 'JohnnieWalker']
-vintage = [random.randint(1900, 2023) for _ in product_ids]
+size_in_litres = [0.5, 0.25, 1, 0.75, 2, 3, 4]# 7
+beverage_types = ['beer', 'gin', 'vodka', 'tequila', 'wine', 'whisky', 'rum', 'brandy']
+sweetness = ['Dry', 'Sweet']
+colors = ['black', 'red', 'white', 'yellow']
+flavours = ['orange', 'grape', 'strawberry', 'lime', 'cherry', 'peach', 'apple', 'pineapple']
+brands = [ 'Budweiser', 'Absolut', 'JackDaniels', 'GreyGoose', 'Jameson', 'ChivasRegal', 'JohnnieWalker']
+vintage = [1900,1910,1930,1940,1950,1960,1970]
 
 # all possible combinations, total combinations will be mulitiplication fo len of each column 
 # total number of unique combinations is: 36158400
